@@ -204,9 +204,9 @@ export class Vless {
         break;
       case 'grpc':
         // @ts-ignore defined
-        this.streamSettings.grpcSettings.serviceName = path;
+        this.streamSettings.grpcSettings.serviceName = this.config.path;
         // @ts-ignore defined
-        this.streamSettings.grpcSettings.multiMode = type === 'multi';
+        this.streamSettings.grpcSettings.multiMode = this.config.type === 'multi';
         break;
       case 'tcp':
         this.streamSettings.tcpSettings = {
