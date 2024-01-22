@@ -1,5 +1,5 @@
 {
-  "name": "v2rayc",
+  "name": "v2ray-cli",
   "version": "0.0.1",
   "description": "V2ray command line client",
   "main": "index.js",
