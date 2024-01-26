@@ -1,3 +1,4 @@
+import { inbounds } from '../../constants/v2ray';
 import { ConnectionType, StreamSettings } from '../../types'
 
 type VlessType = Partial<{
@@ -254,6 +255,7 @@ export class Vless {
     this.outbound = {
       streamSettings: this.streamSettings as StreamSettings,
       settings: this.settings,
+      inbounds: inbounds
     }
   }
 

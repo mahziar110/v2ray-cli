@@ -16,4 +16,15 @@ export class File {
       }
     });
   }
+
+  public read() {
+    let dd = '';
+    fs.readFile(this.path, 'utf8', (err: {}, data: any) => {
+      console.log(data);
+      console.log(err);
+      dd = data;
+    });
+
+    return dd;
+  }
 }
