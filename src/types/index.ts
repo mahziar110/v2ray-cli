@@ -165,3 +165,5 @@ export type StreamSettings = {
   sockopt?: SockoptObject;
   [key: string]: any;
 }
+
+export type ProxyMode = 'PAC' | 'Global' | 'Manual';

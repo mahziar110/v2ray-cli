@@ -17,14 +17,9 @@ export class File {
     });
   }
 
-  public read() {
-    let dd = '';
-    fs.readFile(this.path, 'utf8', (err: {}, data: any) => {
-      console.log(data);
-      console.log(err);
-      dd = data;
+  public async read() {
+    return await fs.readFileSync(this.path, 'utf8', (err: {}, data: any) => {
+      return data;
     });
-
-    return dd;
   }
 }
