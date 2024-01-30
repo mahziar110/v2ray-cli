@@ -32,4 +32,3 @@ export const inbounds: any = [
     tag: 'api',
   },
 ];
-

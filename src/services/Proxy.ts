@@ -1,6 +1,7 @@
 import { ProxyMode } from '../types';
 import { execAsync } from '../helpers/general/execAsync';
 import { PacServer } from './PacProxy';
+import { File } from '../helpers/general/File';
 
 export default class ProxyService {
   private httpPort: number;

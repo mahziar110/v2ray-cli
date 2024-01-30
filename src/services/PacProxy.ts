@@ -3,10 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import fsExtra from 'fs-extra';
 import chokidar from 'chokidar';
-
-const pacDir = '../resources/pac';
-const globalPacConf = `${pacDir}/gfwlist.txt`;
-const userPacConf = `${pacDir}/gfwlist-user.txt`;
+import { pacDir, globalPacConf, userPacConf } from '../constants/pac';
 
 
 export function debounce<params extends any[]>(fn: (...args: params) => any, timeout: number) {
@@ -51,9 +48,6 @@ export class PacServer {
   static startPacServer(httpPort: number, sockPort: number, pacPort: number) {
     server?.close();
     server = new PacServer(httpPort, sockPort, pacPort, path.resolve(pacDir, 'proxy.pac'));
-    console.log('🖥️');
-    console.log(server.core);
-    console.log('------------------------------------')
   }
 
   static stopPacServer() {

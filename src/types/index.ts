@@ -167,3 +167,11 @@ export type StreamSettings = {
 }
 
 export type ProxyMode = 'PAC' | 'Global' | 'Manual';
+
+export type Inbounds = {
+  listen: string;
+  port: number;
+  protocol: string;
+  tag: string;
+  allocate: Object
+}
